@@ -1,8 +1,9 @@
 
 
-<h2>DeepInsights</h2>
-** Django-React
-    Django backend with postgresql, custom-auth with jwt token, Frontend react **
+<h1>DeepInsights</h1>
+<h3> Django-React
+    Django backend with postgresql, custom-auth with jwt token, Frontend react </h3>
+    
  ``` bash
    # install frontend
         cd frontend  && npm install
