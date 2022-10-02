@@ -1,6 +1,5 @@
-# Simple Django Login and Registration
+# Django Login and Registration
 
-An example of Django project with basic user functionality.
 
 ## Screenshots
 
