@@ -1,7 +1,7 @@
 
 
 <h1>DeepInsights</h1>
-<h3> Django-React
+<!-- <h3> Django-React
     Django backend with postgresql, custom-auth with jwt token, Frontend react </h3>
     
  ``` bash
@@ -57,4 +57,4 @@
         Running the tests
         -----------------
 
-        python3 manage.py test
+        python3 manage.py test -->

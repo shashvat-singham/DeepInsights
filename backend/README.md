@@ -1,47 +1,77 @@
+# Simple Django Login and Registration
 
-To run locally, do the usual:
+An example of Django project with basic user functionality.
 
-#. Create a Python 3.5 virtualenv
+## Screenshots
 
-#. Install dependencies::
+| Log In | Create an account | Authorized page |
+| -------|--------------|-----------------|
+| <img src="./screenshots/login.png" width="200"> | <img src="./screenshots/create_an_account.png" width="200"> | <img src="./screenshots/authorized_page.png" width="200"> |
 
-    pip3 install -r requirements.txt
+| Password reset | Set new password | Password change |
+| ---------------|------------------|-----------------|
+| <img src="./screenshots/password_reset.png" width="200"> | <img src="./screenshots/set_new_password.png" width="200"> | <img src="./screenshots/password_change.png" width="200"> |
 
-#. Create databases::
+## Functionality
 
-    createuser -d djangoproject --superuser
-    createdb -O djangoproject djangoproject
-    createuser -d code.djangoproject --superuser
-    createdb -O code.djangoproject code.djangoproject
+- Log in
+    - via username & password
+    - via email & password
+    - via email or username & password
+    - with a remember me checkbox (optional)
+- Create an account
+- Log out
+- Profile activation via email
+- Reset password
+- Remind a username
+- Resend an activation code
+- Change password
+- Change email
+- Change profile
+- Multilingual: English, French, Russian, Simplified Chinese and Spanish
 
-#. Setting up database access
+## Installing
 
-   If you are using the default postgres configuration, chances are you will
-   have to give a password for the newly created users in order to be able to
-   use them for Django::
+### Clone the project
 
-     psql
-     ALTER USER djangoproject WITH PASSWORD 'secret';
-     ALTER USER "code.djangoproject" WITH PASSWORD 'secret';
-     \d
+```
+git clone https://github.com/egorsmkv/simple-django-login-and-register
+cd simple-django-login-and-register
+```
 
-   (Use the same passwords as the ones you've used in your `secrets.json` file)
+### Install dependencies & activate virtualenv
 
-#. Create tables::
+```
+pip install pipenv
 
-    psql -d code.djangoproject < tracdb/trac.sql
+pipenv install
+pipenv shell
+```
 
-    python3 manage.py migrate
+### Configure the settings (connection to the database, connection to an SMTP server, and other options)
 
-#. Create a superuser::
+1. Edit `source/app/conf/development/settings.py` if you want to develop the project.
 
-   python3 manage.py createsuperuser
+2. Edit `source/app/conf/production/settings.py` if you want to run the project in production.
 
-#. Finally run the server::
-   python3 manage.py runserver 
-   Open localhost:8000/
+### Apply migrations
 
-Running the tests
------------------
+```
+python source/manage.py migrate
+```
 
-   python3 manage.py test
+### Collect static files (only on a production server)
+
+```
+python source/manage.py collectstatic
+```
+
+### Running
+
+#### A development server
+
+Just run this command:
+
+```
+python source/manage.py runserver
+```
