@@ -5,7 +5,7 @@ const Register = () => {
   const array = ["your first name", "your last name"];
   const signUp = [
     {
-      type: "text",
+      type: "email",
       placeholder: "name@company.com",
     },
     {
@@ -16,9 +16,11 @@ const Register = () => {
   return (
     <>
       <div className="container">
+        {/* logo */}
         <nav>
-          <h1 className="logo">LOGO</h1>
+          <h1 className="logo">DeepInsights</h1>
         </nav>
+        {/* create account */}
         <div className="main-div">
           <div className="sub-div">
             <h1 className="head">Create Account</h1>
@@ -28,7 +30,9 @@ const Register = () => {
             <a href={url} className="links">
               Sign up with Google
             </a>
-            <p className="or">OR</p>
+            <p className="or">
+              ------------- or Sign up with Email -------------{" "}
+            </p>
             <div className="name-input">
               {/* name and last name input */}
               {array.map((e) => {
@@ -39,15 +43,28 @@ const Register = () => {
             </div>
             {/* email and password input tag */}
             {signUp.map((e) => {
-              return <input type={e.type} placeholder={e.placeholder}></input>;
+              return (
+                <>
+                  <label for={e.type}>{e.type}</label>
+                  <input
+                    type={e.type}
+                    id={e.type}
+                    placeholder={e.placeholder}
+                  ></input>
+                </>
+              );
             })}
             <a href={url} className="links login">
               Create account
             </a>
-            <p className="cont">Already a user? Log in to your account</p>
+            <p className="cont">
+              Already a user?{" "}
+              <span style={{ color: "#B44538" }}>Log in to your account</span>
+            </p>
             <p className="cont">
               By using <b>DeepInsights</b> you agree to the{" "}
-              <b>Terms of Services</b> and Privacy Policy
+              <span style={{ color: "#B44538" }}>Terms of Services</span> and{" "}
+              <span style={{ color: "#B44538" }}>Privacy Policy</span>
             </p>
           </div>
         </div>
