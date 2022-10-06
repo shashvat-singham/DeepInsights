@@ -12,10 +12,10 @@ const Landpage = () => {
             <p className="btn">Why DeepInsights</p>
             <p className="btn">Blog</p>
             <p className="btn">Contact us</p>
-            <a href={url} className="btn blinks">
+            <a href="/login" className="btn blinks">
               Log In
             </a>
-            <a href={url} className="btn-link">
+            <a href="/sign-up" className="btn-link">
               Start for Free
             </a>
           </div>

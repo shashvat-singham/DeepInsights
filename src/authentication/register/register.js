@@ -54,12 +54,14 @@ const Register = () => {
                 </>
               );
             })}
-            <a href={url} className="links login">
+            <a href={url} className="links sign-up">
               Create account
             </a>
             <p className="cont">
               Already a user?{" "}
-              <span style={{ color: "#B44538" }}>Log in to your account</span>
+              <a href="/login" style={{ color: "#B44538" }}>
+                Log in to your account
+              </a>
             </p>
             <p className="cont">
               By using <b>DeepInsights</b> you agree to the{" "}
