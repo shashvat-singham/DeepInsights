@@ -54,7 +54,12 @@ const Register = () => {
                 </>
               );
             })}
-            <a href={url} className="links sign-up">
+            <p className="err-msg">
+              Password must have at least 8 characters and must contain at least
+              one uppercase, one lowercase, one numeric, and one special
+              character.
+            </p>
+            <a href="/verify" className="links sign-up">
               Create account
             </a>
             <p className="cont">

@@ -33,9 +33,16 @@ const Login = () => {
               placeholder="password..."
             ></input>
 
-            <a href={url} className="forgot-password">
+            <a href="/forgot-password" className="forgot-password">
               Forgot your password?
             </a>
+            <p className="err-msg">
+              Your password is incorrect or this account doesn’t exist. Please
+              try again or{" "}
+              <a href="/forgot-password" style={{ color: "#B44538" }}>
+                reset your password.
+              </a>
+            </p>
             <a href={url} className="links sign-up">
               Log In
             </a>

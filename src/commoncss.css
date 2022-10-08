@@ -72,11 +72,12 @@ label {
     margin-top: 1rem;
     margin-bottom: 3px;
     text-transform: capitalize;
+    font-size: 0.9em;
 }
 
 .sign-up {
     margin-top: 1.5rem;
-    background-color: #BC817A;
+    background-color: #B44538;
 }
 
 .sub-div {
@@ -97,4 +98,19 @@ input {
     color: rgb(255,255,255);
     border: 0.1rem solid #ccc;
     background-color: rgba(0,0,0,0.6);
+}
+
+.err-msg {
+    background: #FFDBD7;
+    color: #B44538 !important;
+    padding: 5px;
+    font-weight: bold;
+    margin-top: 5px;
+    border-radius: 5px;
+}
+
+@media screen and (max-width: 800px) {
+    .msg {
+        text-align: center;
+    }
 }
