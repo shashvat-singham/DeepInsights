@@ -9,6 +9,8 @@ import ForgotPass from "./authentication/forgotpassword/forgotPass";
 import Emailsent from "./authentication/emailSent";
 import Passwordreset from "./authentication/forgotpassword/passwordReset";
 import Resetsuccess from "./authentication/forgotpassword/reset-successfully";
+import Dashboard from "./dashboard/dashboard";
+import Integration from "./dashboard/integration";
 const App = () => {
   return (
     <>
@@ -22,6 +24,8 @@ const App = () => {
           <Route exact path="/reset-sent" element={<Emailsent />} />
           <Route exact path="/password-reset" element={<Passwordreset />} />
           <Route exact path="/reset-success" element={<Resetsuccess />} />
+          <Route exact path="/dashboard" element={<Dashboard />} />
+          <Route exact path="/my-integration" element={<Integration />} />
         </Routes>
       </Router>
     </>
