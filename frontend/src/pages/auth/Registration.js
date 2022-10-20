@@ -28,7 +28,7 @@ const Registration = () => {
       console.log(typeof (res.data))
       console.log(res.data)
       storeToken(res.data.token)
-      navigate('/dashboard')
+      navigate('/verify')
     }
   }
   
@@ -158,7 +158,7 @@ const Registration = () => {
               Create account
             </a> */}
              <Box textAlign='center'>
-         <Button type='submit' variant='contained' style={{ backgroundColor: "#B44538"}} sx={{ mt: 3, mb: 2, px: 15 }}  > Create account</Button>
+         <Button type='submit' variant='contained' style={{ backgroundColor: "#B44538"}} sx={{ mt: 3, mb: 2, px: 15 }}   > Create account</Button>
         </Box>
       {server_error.non_field_errors ? <Alert severity='error'>{server_error.non_field_errors[0]}</Alert> : ''}
             <p className="cont">

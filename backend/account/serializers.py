@@ -28,24 +28,23 @@ class UserRegistrationSerializer(serializers.ModelSerializer):
 
   def validate(self, attrs):
     email = attrs.get('email')
-    if User.objects.filter(email=email).exists():
-      user = User.objects.get(email = email)
-      uid = urlsafe_base64_encode(force_bytes(user.id))
-      print('Encoded UID', uid)
-      token = PasswordResetTokenGenerator().make_token(user)
-      print('Register User Token', token)
-      link = 'http://localhost:3000/api/user/login/'+uid+'/'+token
-      print('Register User Link', link)
-      # Send EMail
-      body = 'Click the Following Link to verify your Registered email on DeepInsights:  '+link
-      data = {
-        'subject':'DeepInsights: Verify Your Email',
-        'body':body,
-        'to_email':user.email
-      }
-      Util.send_email(data)
-    return attrs
     
+    # user = User.objects.get(email = email)
+    # uid = urlsafe_base64_encode(force_bytes(user.id))
+    # print('Encoded UID', uid)
+    # token = PasswordResetTokenGenerator().make_token(user)
+    # print('Register User Token', token)
+    link = 'http://localhost:3000/login/'
+    print('Register User Link', link)
+    # Send EMail
+    body = 'Click the Following Link to verify your Registered email on DeepInsights:  '+link
+    data = {
+        'subject':'DeepInsights: Verify Your Registered Email',
+        'body':body,
+        'to_email':email
+    }
+    Util.send_email(data)
+    return attrs 
 
   
 

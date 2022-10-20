@@ -52,10 +52,11 @@ const UserLogin = () => {
       navigate('/dashboard')
     }
   }
-  let { access_token } = getToken()
-  useEffect(() => {
-    dispatch(setUserToken({ access_token: access_token }))
-  }, [access_token, dispatch])
+  // For auto directing after registeration to dashborad or by clicking on mail link.
+  // let { access_token } = getToken()
+  // useEffect(() => {
+  //   dispatch(setUserToken({ access_token: access_token }))
+  // }, [access_token, dispatch])
 
 
   return <>

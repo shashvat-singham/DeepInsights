@@ -1,10 +1,10 @@
-## DeepInsights Django REST Framework  Authentication API
+## Django REST Framework Complete Authentication API
 ## To Run this Project follow below:
 
 ```bash
-virtualenv env 
-env\scripts\activate
+mkvirtualenv authenv
 pip install -r requirements.txt
+python manage.py makemigrations
 python manage.py migrate
 python manage.py runserver
 ```
